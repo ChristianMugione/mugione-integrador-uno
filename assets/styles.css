@@ -1,0 +1,14 @@
+/* Hoja de estilos del Proyecto Integrador
+*  del primer módulo del curso de Full Stak
+*  de Nucba
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+
+  border: 1px solid gray;
+}
