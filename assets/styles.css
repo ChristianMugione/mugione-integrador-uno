@@ -20,6 +20,10 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cabecera {
@@ -27,6 +31,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-top: -74px;
   color: white;
   background-image: url(./img/fondo-portada.png);
   background-size: cover;
@@ -40,6 +46,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: sticky;
+  padding: 0 30px;
   top: 5px;
   width: 100%;
   max-width: 1200px;
@@ -58,13 +65,16 @@ body {
 }
 
 .logo-brand img {
-  width: 40px;
-  margin: 10px 8px 10px 30px;
+  width: 100px;
+  margin: 2px 8px 2px 0;
+  filter: drop-shadow(0 0 8px white);
+  -webkit-filter: drop-shadow(0 0 8px white);
 }
 
 .logo-brand a {
   font-size: 24px;
   color: white;
+  display: none;
 }
 
 .items {
@@ -72,17 +82,17 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  margin: 0 20px;
 }
 
 .items a {
+  font-size: 20px;
   font-weight: 600;
   color: #fff;
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 1px 5px black;
 }
 
 .items a:hover {
-  text-shadow: 0 0 15px white;
+  text-shadow: 0 1px 15px white;
 }
 
 #portada {
@@ -104,18 +114,15 @@ body {
   gap: 20px;
 }
 
-.titulo,
-.parrafo-inicial {
-  text-shadow: 0 0 5px black;
-}
-
 .titulo {
   font-size: 38px;
+  text-shadow: 0 2px 8px black;
 }
 
 .parrafo-inicial {
   font-size: 22px;
   font-weight: 500;
+  text-shadow: 0 2px 8px black;
 }
 
 .portada-botones {
@@ -217,7 +224,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  background: linear-gradient(to bottom right, #a8c5be, #c4ebe2);
+  background: linear-gradient(45deg, #a8c5be, #e0f7f1);
   box-shadow: 0 0 15px #8bada5;
 }
 
@@ -245,7 +252,8 @@ body {
   align-items: center;
   padding: 20px;
   gap: 20px;
-  box-shadow: 0 0 5px black;
+  background-color: rgba(255, 255, 255, 50%);
+  box-shadow: 0 2px 5px rgb(209, 209, 209);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -255,13 +263,14 @@ body {
 
 .card i {
   font-size: 38px;
-  background-color: #fff;
+  background: radial-gradient(white, rgb(220, 220, 220));
   padding: 15px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  box-shadow: 0 2px 5px rgb(155, 155, 155);
 }
 
 .card-info {
