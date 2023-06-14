@@ -61,12 +61,14 @@ body {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  transition: all 0.2s ease-in;
 }
 
 .logo-brand {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in;
 }
 
 .logo-brand img {
@@ -113,15 +115,31 @@ body {
   gap: 20px;
 }
 
+.items,
 .items a {
   font-size: 20px;
   font-weight: 600;
-  color: white;
-  text-shadow: 0 1px 5px black;
+  color: var(--celeste-claro);
+  text-shadow: 0 1px 5px white;
+  transition: all 0.2s ease-in;
 }
 
 .items a:hover {
-  text-shadow: 0 1px 15px white;
+  color: white;
+  text-shadow: 0 1px 15px var(--celeste-claro);
+  transition: all 0.2s ease-in;
+}
+
+.blurer {
+  width: 790px;
+  height: 100vh;
+  position: absolute;
+  background: #ffffff20;
+  top: 49px;
+  left: -700px;
+  z-index: -1;
+  backdrop-filter: blur(8px);
+  display: none;
 }
 
 /* CABECERA / PORTADA*/
@@ -145,6 +163,7 @@ body {
 .titulo {
   font-size: 38px;
   text-shadow: 1px 2px 6px black, -1px -2px 6px gray;
+  text-transform: uppercase;
 }
 
 .parrafo-inicial {
@@ -170,15 +189,18 @@ body {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s ease-in;
 }
 
 .btn:first-child {
   background: radial-gradient(var(--celeste-claro), var(--celeste-oscuro));
   color: white;
+  transition: all 0.2s ease-in;
 }
 
 .btn:hover {
   box-shadow: 0 0 25px white;
+  transition: all 0.2s ease-in;
 }
 
 .btn a {
@@ -329,10 +351,6 @@ body {
   padding: 60px 0;
 }
 
-#contacto div {
-  /* border: 1px solid black; */
-}
-
 .contacto-container {
   width: 100%;
   display: flex;
@@ -382,10 +400,12 @@ body {
   font-size: 40px;
   color: rgb(233, 114, 3);
   text-shadow: 0 0 10px rgb(124, 60, 0);
+  transition: all 0.2s ease-in;
 }
 
 .contacto-info-ok:hover {
   text-shadow: 0 0 10px rgb(216, 105, 1);
+  transition: all 0.2s ease-in;
 }
 
 .contacto-form {
@@ -428,11 +448,13 @@ body {
 
 #enviar {
   cursor: pointer;
+  transition: all 0.2s ease-in;
 }
 
 #enviar:hover {
   background-color: #005500;
   color: #fff;
+  transition: all 0.2s ease-in;
 }
 
 /* FOOTER */
