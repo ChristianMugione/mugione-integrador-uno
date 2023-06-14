@@ -7,28 +7,38 @@
     content="Brindamos asesoramiento integral para quienes desean una vida de viajes y acampadas en vehículos recreativos">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <title>Ruta Camper</title>
   <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/mediaqueries.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
-  <div class="logo-menu">
+  <header class="logo-menu">
     <div class="logo-brand">
-      <img src="./assets/img/ruta-camper-logo--.png" alt="">
+      <img src="./assets/img/ruta-camper-logo.png" alt="">
       <a href="#portada">RUTA CAMPER</a>
     </div>
     <nav class="navbar">
+      <label for="toggle-menu">
+        <i class="bi bi-list" id="toggle-btn"></i>
+      </label>
+      <input type="checkbox" id="toggle-menu">
       <ul class="items">
         <li><a href="#portada">Home</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        <li><a href="login.html">Ingreso/</a><a href="register.html">Registro</a></li>
       </ul>
       <!-- - navbar con scroll hasta c/sección -->
     </nav>
-  </div>
-  <header class="cabecera">
+  </header>
+  <div class="cabecera">
     <section id="portada">
       <div class="portada-contenedor">
         <h1 class="titulo">Tu viaje a la libertad empieza con nosotros</h1>
@@ -37,12 +47,12 @@
           vehículos recreativos
         </p>
         <div class="portada-botones">
-          <button class="btn">INGRESAR</button>
-          <button class="btn">REGISTRARSE</button>
+          <button class="btn"><a href="#servicios">SERVICIOS</a></button>
+          <button class="btn"><a href="#contacto">CONTACTO</a></button>
         </div>
       </div>
     </section>
-  </header>
+  </div>
   <main>
     <section id="nosotros">
       <div class="nosotros-container">
@@ -158,8 +168,6 @@
           </form>
         </div>
 
-
-
         <div class="contacto-info">
           <h3 class="contact-info-titulo">Encontranos</h3>
           <ul class="contacto-lista">
@@ -182,44 +190,12 @@
             <!-- <a href="https://www.gps.ie/sport-gps/">bike gps</a> -->
           </iframe>
         </div>
-
       </div>
-
-
-
-
-      <!-- (contact form, 
-        info de contacto 
-        y localización de la página, 
-        iframe con un mapa). -->
     </section>
-
-    <!-- Debe contar con una sección de cards con imágenes. Estas cards pueden ser de producto o de información ( En caso de ser de producto, debe tener un título, un precio y un botón de compra) -->
-
-
-
   </main>
-  <footer>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <p>.</p>
-    <!-- <h2>Footer</h2> -->
+  <footer id="footer">
+    <img src="./assets/img/ruta-camper-logo.png" alt="">
+    <p>Todos los derechos reservados</p>
   </footer>
 
   <!-- Proyecto Integrador | Diseño Web
@@ -231,7 +207,7 @@
   - footer.
   - entregar link de Github y el de Vercel.
   /Resumen
-
+  -->
 
 </body>
 

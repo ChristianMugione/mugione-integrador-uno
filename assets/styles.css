@@ -16,6 +16,11 @@
 
 :root {
   --texto-oscuro: #000513;
+  --azul: #142559;
+  --celeste-claro: #7395d9;
+  --celeste: #4b72a6;
+  --celeste-oscuro: #3f5573;
+  --verde-oscuro: #364021;
 }
 
 body {
@@ -38,7 +43,7 @@ body {
   background-size: cover;
   background-position: center;
   height: 600px;
-  box-shadow: 0 10px 10px #636f87;
+  box-shadow: 0 10px 10px var(--celeste-oscuro);
 }
 
 .logo-menu {
@@ -50,7 +55,7 @@ body {
   top: 5px;
   width: 100%;
   max-width: 1200px;
-  background-color: rgba(255, 255, 255, 50%);
+  background-color: rgba(255, 255, 255, 70%);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -77,6 +82,30 @@ body {
   display: none;
 }
 
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+#toggle-btn {
+  display: none;
+  /**/
+  font-size: 32px;
+  color: white;
+  box-shadow: 0 2px 2px var(--celeste-oscuro);
+  border: 1px solid var(--celeste-oscuro);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
 .items {
   display: flex;
   justify-content: space-between;
@@ -87,7 +116,7 @@ body {
 .items a {
   font-size: 20px;
   font-weight: 600;
-  color: #fff;
+  color: white;
   text-shadow: 0 1px 5px black;
 }
 
@@ -95,20 +124,19 @@ body {
   text-shadow: 0 1px 15px white;
 }
 
+/* CABECERA / PORTADA*/
+
 #portada {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
 }
 
 .portada-contenedor {
   display: flex;
   flex-direction: column;
   width: 800px;
-  /* background: rgba(100, 100, 200, 80%); */
-  /* margin-top: 100px; */
   padding: 20px;
   text-align: center;
   gap: 20px;
@@ -116,13 +144,13 @@ body {
 
 .titulo {
   font-size: 38px;
-  text-shadow: 0 2px 8px black;
+  text-shadow: 1px 2px 6px black, -1px -2px 6px gray;
 }
 
 .parrafo-inicial {
   font-size: 22px;
   font-weight: 500;
-  text-shadow: 0 2px 8px black;
+  text-shadow: 1px 2px 2px black, -1px -2px 2px gray;
 }
 
 .portada-botones {
@@ -145,11 +173,17 @@ body {
 }
 
 .btn:first-child {
-  background-color: #31fac8;
+  background: radial-gradient(var(--celeste-claro), var(--celeste-oscuro));
+  color: white;
 }
 
 .btn:hover {
   box-shadow: 0 0 25px white;
+}
+
+.btn a {
+  color: var(--texto-oscuro);
+  font-weight: 800;
 }
 
 /* SECCION NOSOTROS */
@@ -177,13 +211,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  /* border: 2px solid #636f87; */
+  box-shadow: 0 0 5px black;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
-  box-shadow: 0 0 10px #636f87;
 }
 /* texto en algun azul oscuro pastel probar*/
 .nosotros-texto {
@@ -224,8 +257,12 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  background: linear-gradient(45deg, #a8c5be, #e0f7f1);
-  box-shadow: 0 0 15px #8bada5;
+  background: linear-gradient(
+    45deg,
+    var(--celeste-oscuro),
+    var(--celeste-claro)
+  );
+  box-shadow: 0 0 10px 3px var(--celeste-oscuro);
 }
 
 .servicios-titulo,
@@ -253,7 +290,7 @@ body {
   padding: 20px;
   gap: 20px;
   background-color: rgba(255, 255, 255, 50%);
-  box-shadow: 0 2px 5px rgb(209, 209, 209);
+  box-shadow: 0 2px 5px var(--celeste-claro);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -290,7 +327,6 @@ body {
   background-size: cover;
   background-position: center;
   padding: 60px 0;
-  box-shadow: 0 0 15px #707591;
 }
 
 #contacto div {
@@ -397,4 +433,24 @@ body {
 #enviar:hover {
   background-color: #005500;
   color: #fff;
+}
+
+/* FOOTER */
+
+#footer {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--celeste-oscuro), var(--celeste-claro));
+  gap: 25px;
+  box-shadow: 0 0 10px 3px var(--celeste-oscuro);
+}
+
+#footer img {
+  filter: drop-shadow(0 0 8px white);
+  -webkit-filter: drop-shadow(0 0 8px white);
+  width: 250px;
 }

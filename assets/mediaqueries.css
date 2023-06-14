@@ -1,0 +1,232 @@
+@media (max-width: 1400px) {
+  .logo-menu {
+    width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
+  .logo-menu {
+    width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-menu {
+    width: 720px;
+  }
+
+  .cabecera {
+    height: 100vh;
+    min-height: 300px;
+    /* 500px;*/
+  }
+
+  .portada-contenedor {
+    width: 85%;
+  }
+
+  .titulo {
+    font-size: 26px;
+  }
+
+  .parrafo-inicial {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .contacto-container {
+    gap: 10px;
+  }
+
+  .contacto-map,
+  .contacto-info,
+  .contacto-form {
+    width: 30%;
+  }
+
+  .lista-item {
+    font-size: 14px;
+  }
+
+  #footer img {
+    width: 200px;
+    filter: drop-shadow(0 0 4px white);
+    -webkit-filter: drop-shadow(0 0 4px white);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-menu {
+    width: 95%;
+  }
+
+  .portada-contenedor {
+    width: 85%;
+  }
+
+  .titulo {
+    font-size: 22px;
+  }
+
+  .parrafo-inicial {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  /* SE ACTIVA DON BURGER */
+
+  #toggle-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .items {
+    position: absolute;
+    flex-direction: column;
+    top: 53px;
+    right: 0;
+    background: #ffffff80;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    border: 0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow: 1px 2px 5px 2px var(--celeste-oscuro);
+    display: none;
+  }
+  .items a {
+    font-size: 28px;
+    color: var(--azul);
+    text-shadow: 0 1px 5px white;
+  }
+
+  #toggle-menu:checked ~ .items {
+    display: flex;
+  }
+
+  #toggle-btn {
+    background-color: #ffffff80;
+    color: var(--azul);
+  }
+
+  .nosotros-container {
+    width: 98%;
+    gap: 12px;
+  }
+
+  .nosotros-texto {
+    width: 55%;
+  }
+
+  .servicios-cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card {
+    width: 98%;
+    flex-direction: row;
+    text-align: left;
+    padding: 15px;
+  }
+
+  .contacto-container {
+    flex-wrap: wrap;
+    width: 98%;
+  }
+
+  .contacto-info,
+  .contacto-form {
+    width: 48%;
+  }
+
+  .contacto-map {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  #nosotros {
+    margin-top: 15px;
+  }
+
+  .nosotros-container {
+    flex-direction: column;
+  }
+
+  .nosotros-imagen {
+    width: 100%;
+    height: 40vw;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+  }
+
+  .nosotros-texto {
+    width: 95%;
+  }
+
+  #servicios {
+    margin-top: 20px;
+  }
+
+  .servicios-container {
+    padding: 20px 0;
+  }
+
+  .servicios-titulo {
+    font-size: 32px;
+  }
+
+  #contacto {
+    padding: 30px 0;
+  }
+
+  .contacto-map,
+  .contacto-info,
+  .contacto-form {
+    height: auto;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+  }
+
+  .contacto-info {
+    align-items: center;
+    width: 260px;
+  }
+
+  .contacto-lista {
+    width: 300px;
+  }
+
+  .lista-item {
+    font-size: 18px;
+  }
+
+  .contacto-info,
+  .contacto-form {
+    width: 100%;
+  }
+
+  .contacto-map {
+    height: 300px;
+  }
+}
+
+/*
+<576px ≥576px ≥768px ≥992px ≥1200px ≥1400px
+        540px  720px  960px  1140px  1320px
+*/

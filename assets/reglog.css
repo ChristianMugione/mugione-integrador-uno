@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --texto-oscuro: #000513;
+  --azul: #142559;
+  --celeste-claro: #7395d9;
+  --celeste: #4b72a6;
+  --celeste-oscuro: #3f5573;
+  --verde-oscuro: #364021;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--celeste-oscuro), var(--celeste-claro));
+}
+
+.cabecera {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -74px;
+  color: white;
+  height: 600px;
+  box-shadow: 0 10px 10px var(--celeste-oscuro);
+}
+
+.logo-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  padding: 0 30px;
+  top: 5px;
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 70%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.logo-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-brand img {
+  width: 100px;
+  margin: 2px 8px 2px 0;
+  filter: drop-shadow(0 0 8px white);
+  -webkit-filter: drop-shadow(0 0 8px white);
+}
+
+.logo-brand a {
+  font-size: 24px;
+  color: white;
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+#toggle-btn {
+  display: none;
+  /**/
+  font-size: 32px;
+  color: white;
+  box-shadow: 0 2px 2px var(--celeste-oscuro);
+  border: 1px solid var(--celeste-oscuro);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.items a {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 5px black;
+}
+
+.items a:hover {
+  text-shadow: 0 1px 15px white;
+}
+
+#portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.portada-contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  padding: 20px;
+  text-align: center;
+  gap: 20px;
+}
+
+.titulo {
+  font-size: 38px;
+  text-shadow: 1px 2px 6px black, -1px -2px 6px gray;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 5px;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 0 1px 3px 1px var(--azul);
+}
+
+.formulario input {
+  padding: 4px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+#boton-si {
+  display: none;
+}
+
+#acuerdo:checked ~ #boton-no {
+  display: none;
+}
+
+#acuerdo:checked ~ #boton-si {
+  display: inline;
+}
+
+/* FOOTER */
+
+#footer {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--celeste-oscuro), var(--celeste-claro));
+  gap: 10px;
+  box-shadow: 0 0 10px 3px var(--celeste-oscuro);
+}
+
+#footer img {
+  width: 100px;
+}
+
+/* MEDIA QUERIES DE LOGIN Y REGISTER */
+
+@media (max-width: 1400px) {
+  .logo-menu {
+    width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
+  .logo-menu {
+    width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-menu {
+    width: 720px;
+  }
+
+  .portada-contenedor {
+    width: 85%;
+  }
+
+  .titulo {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-menu {
+    width: 95%;
+  }
+
+  .portada-contenedor {
+    width: 85%;
+  }
+
+  .titulo {
+    font-size: 22px;
+  }
+
+  /* SE ACTIVA DON BURGER */
+
+  #toggle-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .items {
+    position: absolute;
+    flex-direction: column;
+    top: 53px;
+    right: 0;
+    background: #ffffff80;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    border: 0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow: 1px 2px 5px 2px var(--celeste-oscuro);
+    display: none;
+  }
+  .items a {
+    font-size: 28px;
+    color: var(--azul);
+    text-shadow: 0 1px 5px white;
+  }
+
+  #toggle-menu:checked ~ .items {
+    display: flex;
+  }
+
+  #toggle-btn {
+    background-color: #ffffff80;
+    color: var(--azul);
+  }
+}
+
+@media (max-width: 350px) {
+  #footer img {
+    width: 50px;
+  }
+}
